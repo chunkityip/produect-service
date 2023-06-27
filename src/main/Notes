@@ -1,0 +1,10 @@
+Q: Why I am creating another class call ProductResponse instead just using Product class in model? They are the same class
+A:  It's a good practice to separate your model entities and the details .I really should not expose your model entities to the outside world.
+Because if in the future and in this product class you have added some other two fees which are necessary for about the business model
+but should not expose these two fields which are not necessary outside to the outside world.
+This is the idea of Abstraction. In this case, DTOs provide a simplified view of data for API interactions , and we as developer adding things at product.
+It promotes modularization, separation of concerns, and better code organization.
+
+Q: Why using List to return all getAllProducts
+A: Because the list is a duplicate collection of elements which each product is unique and list has the index for Product id which easy to search
+Also , list is in order which will sort in ascending order
